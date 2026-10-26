@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        html{
+    scroll-behavior: smooth;
+    
+}
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(20, 20, 76);
+            color: aliceblue;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 80px;
+            background-color: rgb(20, 20, 76);
+           font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+           font-size: 1.3rem;
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+        } 
+        nav ul li{
+            margin: 0 23px;
+            list-style: none;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color:white ;
+        }
+        nav ul li a:hover{
+            color:rgb(111, 129, 246) ;
+            font-size: 1.3rem;
+        }
+        main hr{
+            border: 0;
+            background: burlywood;
+            height: 1.2px;
+            margin: 40px 84px;
+
+        }
+        .left{
+            font-size: 1.8rem;
+        
+        }
+        .firstsection{
+            display: flex;
+            justify-content: space-around ;
+            align-items: center;
+            margin: 90px 0;
+            
+
+        }
+        .firstsection > div{
+            width: 60%;
+            
+        }
+        .leftsection{
+            font-size: 3.1rem;
+            margin: 80px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }  
+        .leftsection .buttons{
+            padding: 50px 0;
+            text-decoration: none;
+        }
+        .leftsection .btn{
+            padding: 12px;
+            background: rgb(17, 5, 100);
+            color: whitesmoke;
+            border: 2px solid white;
+            border-radius: 5px;
+            font-size: 19px;
+            cursor: pointer;   
+            text-decoration: none;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .leftsection .btn a{
+            text-decoration: none;
+            color: whitesmoke;
+        }
+        .rightsection img{
+            width: 80%;
+            margin: 0px;
+
+        }
+        .purple{
+            color: plum;
+
+        }
+        .text-grey{
+            color: plum;
+
+        }
+        #element{
+            color: plum;
+
+
+        }
+        .secondsection{
+            max-width: 15vw;
+            margin: auto;
+            height: 50vh;
+            font-size: 40px;
+            text-underline-position: auto;
+            
+        }
+        .about{
+            width: 100%;
+            padding: 100px 0px;
+            background-color: rgb(20, 20, 76);
+            
+        }
+        .about img{
+            height: auto;
+            width: 430px; 
+        }
+        .about-text{
+            width: 550px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+        .main{
+            width: 1130px;
+            max-width: 95%;
+            margin:0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .about-text h2{
+            color: rgb(198, 196, 211);
+            font-size: 75px;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .about-text h5{
+            color: rgb(133, 127, 171);
+            letter-spacing: 2px;
+            font-size: 22px;
+            margin-bottom: 25px;
+            text-transform: capitalize;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .about-text p{
+            color: whitesmoke;
+            letter-spacing: 1px;
+            line-height: 28px;
+            font-size: 18px;
+            margin-bottom: 45px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+        button{
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            border: 2px solid transparent;
+             font-weight: bold;
+             padding: 13px 30px;
+             border-radius: 30px;
+             transition: .4s;
+        }
+
+
+        .service{
+            background: rgb(143, 143, 149);
+            width: 100%;
+            padding: 100px 0px;
+        }
+        .title h2{
+            color: rgb(73, 28, 28);
+            font-size: 75px;
+            width: 1130px;
+            margin: 30px auto;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .card{
+            height: 365px;
+            width: 335px;
+            padding: 20px 35px;
+            background: rgb(102, 114, 169);
+            border-radius: 20px;
+            margin: 15px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .card:hover {
+
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #00bfff;
+
+}
+
+        
+        .card i{
+            font-size: 50px;
+            display: block;
+            text-align: center;
+            margin: 25px 0px;
+            color: skyblue;
+        }
+        h5{
+            color: whitesmoke;
+            font-size: 23px;
+            margin: 15px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .pra p{
+            color: aliceblue;
+            font-size: 16px;
+            line-height: 27px;
+            margin-bottom: 25px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .card .button{
+            background-color: white;
+            color: skyblue;
+            text-decoration: none;
+            border: 2px solid transparent;
+             font-weight: bold;
+             padding: 9px 30px;
+             border-radius: 30px;
+             transition: .4s;
+             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+        .card .button:hover{
+            background-color: rgb(150, 150, 242);
+            border: 2px solid;
+            cursor: pointer;
+
+        }
+        .contact-me{
+            width: 100%;
+            height: 290px;
+            background: blu;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgb(20, 20, 76);
+
+        }
+        .contact-me h1{
+            color: aliceblue;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .contact-me .front p{
+            font-size: x-large;
+            text-align: left;  
+        } 
+        p{
+            text-align: left;
+
+        }            
+        .contact-me .button-two:hover{
+            background-color: white;
+            border: 2px solid;
+            cursor: pointer;
+
+        }
+/* body{
+    background:#081b29;
+    color:white;
+} */
+
+/* Skills Section */
+.technical {
+    padding: 60px 8%;
+    background-color: rgb(20, 20, 76);
+}
+.title {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 50px;
+    color: white;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+    max-width: 1100px;
+    margin: auto;
+}
+.skill-box {
+    padding: 25px 30px;
+    border: 1px solid #ebeeef;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(243, 244, 245, 0.2);
+    transition: 0.4s;
+}
+.skill-box h2 {
+    margin-bottom: 25px;
+    color: #f3f5f6;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 25px;
+}
+.skill-box h2 i {
+    color: #87ceeb;
+    margin-right: 8px;
+}
+.skill-box:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.35);
+}
+.skill {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+.progress {
+    width: 100%;
+    height: 12px;
+    border: 1px solid #6a6b6b;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.progress div {
+    height: 100%;
+    background: #f1f5f6;
+    border-radius: 20px;
+}
+/* Frontend */
+.html { width: 90%; }
+.css { width: 85%; }
+.js { width: 80%; }
+.bootstrap { width: 80%; }
+/* Backend */
+.java { width: 90%; }
+.spring { width: 85%; }
+.python { width: 75%; }
+.rest { width: 80%; }
+/* Database */
+.mysql { width: 85%; }
+.mongodb { width: 75%; }
+.postgresql { width: 70%; }
+.sql { width: 85%; }
+/* Tools */
+.git { width: 85%; }
+.intellij { width: 85%; }
+.postman { width: 80%; }
+.maven { width: 80%; }
+/* Responsive Design */
+@media (max-width: 768px) {
+    .technical {
+        padding: 45px 5%;
+    }
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .title {
+        font-size: 35px;
+    }
+    .skill-box {
+        padding: 22px;
+    }
+}
+
+.projects{
+    padding:80px 10%;
+    text-align:center;
+    background-color: rgb(20, 20, 76);
+}
+
+.project-title{
+    font-size:45px;
+    color:white;
+    margin-bottom:10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+    'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.project-subtitle{
+    color:#cfcfcf;
+    margin-bottom:50px;
+    display:flex;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+    'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.project-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    transition:.4s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.project-card img{
+    width:80%;
+    height:220px;
+    object-fit:cover;
+}
+
+.project-card h2{
+    padding:15px;
+    color:#111;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+    'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.project-card p{
+    padding:0 15px;
+    color:#555;
+    line-height:1.6;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+    'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.project-btn{
+    display:block;
+    margin:20px;
+    padding:12px;
+    background:#032a56;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+    'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.project-btn:hover{
+    background:#021217;
+}
+
+.achievements {
+    padding: 80px 10%;
+    background-color: rgb(20, 20, 76);
+    color: white;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+    'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.section-title {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: #f1cfcf;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-style: italic;
+    display:flex;
+    justify-content: center;
+}
+
+.achievement-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.achievement-card {
+    width: 280px;
+    padding: 25px;
+    background: #112240;
+    border-radius: 10px;
+    transition: 0.4s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #191a1a;
+}
+
+.achievement-card h3 {
+    color: #0f76eb;
+    margin-bottom: 15px;
+}
+
+.achievement-card p {
+    line-height: 1.6;
+}
+
+.contact-me{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* Vertical center */
+}
+.details{
+    display: flex;
+    margin: 20px 0px;
+    gap: 50px;
+       
+}
+
+.footer {
+    background-color: rgb(20, 20, 76);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.footer h2 {
+    margin-bottom: 20px;
+}
+
+.footer-content p {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links {
+    margin: 20px 0;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.social-links a:hover {
+    color: #00bfff;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+    <nav>
+        <div class="left">SIDDHARTHA'S PORTFOLIO</div>
+        <div class="right">
+            <ul>
+                <li><a href="#HOME">HOME</a></li>
+                <li><a href="#ABOUT">ABOUT</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+               <li><a href="#PROJECTS">PROJECTS</a></li>
+               <li><a href="#ACHIEVEMENTS">ACHIEVEMENTS</a></li>
+            </ul>
+        </div>
+    </nav>
+     </header>
+     <main>
+         <section class="firstsection" id="HOME">
+            <div class="leftsection">
+                Hi, My name is <span class="purple">siddhartha</span>
+                <div>and I am a Passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn"><a href="https://drive.google.com/drive/u/0/folders/1Km68lR9SIsAuWpRihPlexlq7uHA141Fp" target="_blank">Download CV</a></button>
+                    <button class="btn"><a href="#CONTACT">Contact me</a></button>
+                </div>
+            </div>
+            <div class="rightsection ">
+                <img src="—Pngtree—programmer code section 1024 computer_14120009.png" alt="">
+
+            </div>
+         </section>
+         <section class="about" id="ABOUT">
+            <div class="main">
+                <img src="IMG_8599.jpg" alt="">
+                <div class="about-text">
+                    <h2>about me</h2>
+                    <h5>Java <span>developer</span></h5>
+                    </h5>
+                    <p>Detail-oriented Java Backend Developer pursuing an MCA,
+                         with expertise in Java, Spring Boot, RESTful APIs,
+                          SQL/NoSQL databases, and modern backend development practices.
+                           Experienced in building real-time applications using WebSocket
+                            and integrating AI-powered solutions through Google Gemini API.
+                             Strong foundation in Object-Oriented Programming, Data Structures
+                              & Algorithms, Database Management Systems, and Agile methodologies.
+                               Proficient in Java, Python, JavaScript, MySQL, MongoDB, PostgreSQL,
+                                Git, and Maven. Passionate about developing scalable, secure,
+                                 and efficient software solutions while continuously learning and
+                                  adapting to emerging technologies. Seeking an entry-level Software
+                                   Engineer or Backend Developer role to contribute technical expertise
+                                    and drive impactful software development initiatives.
+                    </p>
+
+                </div>
+                </div>
+         </section>
+         
+<section class="technical" id="skills">
+
+    <h1 class="title">Technical Skills</h1>
+
+    <div class="skills-container">
+
+        <!-- Frontend Skills -->
+        <div class="skill-box">
+            <h2><i class="fa-solid fa-code"></i> Frontend Skills</h2>
+
+            <div class="skill">
+                <span>HTML5</span>
+                <span>90%</span>
+            </div>
+            <div class="progress">
+                <div class="html"></div>
+            </div>
+
+            <div class="skill">
+                <span>CSS3</span>
+                <span>85%</span>
+            </div>
+            <div class="progress">
+                <div class="css"></div>
+            </div>
+
+            <div class="skill">
+                <span>JavaScript</span>
+                <span>80%</span>
+            </div>
+            <div class="progress">
+                <div class="js"></div>
+            </div>
+
+            <div class="skill">
+                <span>Bootstrap</span>
+                <span>80%</span>
+            </div>
+            <div class="progress">
+                <div class="bootstrap"></div>
+            </div>
+        </div>
+
+        <!-- Backend Skills -->
+        <div class="skill-box">
+            <h2><i class="fa-solid fa-server"></i> Backend Skills</h2>
+
+            <div class="skill">
+                <span>Java</span>
+                <span>90%</span>
+            </div>
+            <div class="progress">
+                <div class="java"></div>
+            </div>
+
+            <div class="skill">
+                <span>Spring Boot</span>
+                <span>85%</span>
+            </div>
+            <div class="progress">
+                <div class="spring"></div>
+            </div>
+
+            <div class="skill">
+                <span>Python</span>
+                <span>75%</span>
+            </div>
+            <div class="progress">
+                <div class="python"></div>
+            </div>
+
+            <div class="skill">
+                <span>REST APIs</span>
+                <span>80%</span>
+            </div>
+            <div class="progress">
+                <div class="rest"></div>
+            </div>
+        </div>
+
+        <!-- Database Skills -->
+        <div class="skill-box">
+            <h2><i class="fa-solid fa-database"></i> Database Skills</h2>
+
+            <div class="skill">
+                <span>MySQL</span>
+                <span>85%</span>
+            </div>
+            <div class="progress">
+                <div class="mysql"></div>
+            </div>
+
+            <div class="skill">
+                <span>MongoDB</span>
+                <span>75%</span>
+            </div>
+            <div class="progress">
+                <div class="mongodb"></div>
+            </div>
+
+            <div class="skill">
+                <span>PostgreSQL</span>
+                <span>70%</span>
+            </div>
+            <div class="progress">
+                <div class="postgresql"></div>
+            </div>
+
+            <div class="skill">
+                <span>SQL</span>
+                <span>85%</span>
+            </div>
+            <div class="progress">
+                <div class="sql"></div>
+            </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-box">
+            <h2><i class="fa-solid fa-screwdriver-wrench"></i> Tools</h2>
+
+            <div class="skill">
+                <span>Git & GitHub</span>
+                <span>85%</span>
+            </div>
+            <div class="progress">
+                <div class="git"></div>
+            </div>
+
+            <div class="skill">
+                <span>IntelliJ IDEA</span>
+                <span>85%</span>
+            </div>
+            <div class="progress">
+                <div class="intellij"></div>
+            </div>
+
+            <div class="skill">
+                <span>Postman</span>
+                <span>80%</span>
+            </div>
+            <div class="progress">
+                <div class="postman"></div>
+            </div>
+
+            <div class="skill">
+                <span>Maven</span>
+                <span>80%</span>
+            </div>
+            <div class="progress">
+                <div class="maven"></div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+        <section class="PROJECTS", id="PROJECTS">
+
+
+<section class="projects" id="PROJECTS">
+
+    <h1 class="project-title">Projects</h1>
+    <p class="project-subtitle">
+        Here are some of my recent projects showcasing my backend and full-stack development skills.
+    </p>
+
+    <div class="project-container">
+
+        <!-- Project 1 -->
+        <div class="project-card">
+            <img src="Screenshot 2026-05-30 at 4.21.01 PM.png" alt="Real Time Chat App">
+
+            <h2>Real-Time Chat Application</h2>
+
+            <p>
+                Built a real-time messaging platform using Spring Boot,
+                WebSocket, STOMP, Thymeleaf, and MySQL for seamless
+                low-latency communication.
+            </p>
+
+            <a href="https://github.com/sidddddd41/chat-Application"
+               target="_blank"
+               class="project-btn">
+                View Project
+            </a>
+
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+
+            <img src="Screenshot 2026-06-01 at 16-51-25 email-writer-frontend.png" alt="AI Email Generator">
+
+            <h2>AI Email Response Generator</h2>
+
+            <p>
+                Developed an AI-powered email drafting tool using
+                Spring Boot, React.js, and Google Gemini API
+                supporting multiple response tones.
+            </p>
+
+            <a href="https://github.com/sidddddd41/AI-Email-Reply-Generator"
+               target="_blank"
+               class="project-btn">
+                View Project
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="achievements" id="ACHIEVEMENTS">
+
+    <h1 class="section-title">My Achievements</h1>
+    <p class="section-subtitle">Some of My Major Achievements</p>
+
+    <div class="achievement-container">
+
+        <div class="achievement-card">
+            <h3>LeetCode</h3>
+            <p>
+                Solved 50+ coding problems, strengthening
+                 Data Structures and Algorithms skills, improving
+                  problem-solving abilities, and developing efficient
+                   solutions using Java.
+            </p>
+        </div>
+
+        <div class="achievement-card">
+            <h3>Java Full Stack</h3>
+            <p>
+                Completed a 3-month Java Full Stack Development internship
+                 organized by EduSkills, gaining hands-on experience in Java,
+                  Spring Boot, HTML, CSS, JavaScript, and MySQL. Developed
+                   practical projects and strengthened my understanding of
+                    object-oriented programming, database management, backend
+                     development, and frontend integration.
+            </p>
+        </div>
+
+        <div class="achievement-card">
+            <h3>Data Analysis</h3>
+            <p>
+                Earned a Cisco Data Analytics certification, demonstrating
+                 knowledge of data analysis and analytical problem-solving.
+            </p>
+        </div>
+
+        <div class="achievement-card">
+            <h3>GeekForGeeks</h3>
+            <p>
+                Practiced 55+ Java DSA questions covering arrays,
+                 strings, searching, sorting, and algorithms to 
+                 strengthen coding efficiency and logical reasoning.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<footer class="footer" id="CONTACT">
+    <h2>Contact Me</h2>
+
+    <div class="footer-content">
+        <p>📧 Email: chaudharysiddhartha@gmail.com</p>
+        <p>📱 Contact: +91 7701800945</p>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/siddhartha-chaudhary-49221b380/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/sidddddd41" target="_blank">GitHub</a>
+            <a href="https://leetcode.com/u/sidd1441/" target="_blank">LeetCode</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 Siddhartha Chaudhary. All Rights Reserved.
+        </p>
+    </div>
+</footer>
+
+
+
+
+     </main>
+     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+     <script>
+        var typed = new Typed('#element', {
+          strings: ['Web Developer', 'Java Developer'],
+          typeSpeed: 50,
+        });
+      </script>
+     
+</body>
+</html> 
